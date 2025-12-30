@@ -11,6 +11,7 @@ describe('GET /posts', () => {
                 }
                 }
             )
+            console.log(response.data)
         } catch(error) {
             expect(error.response.status).toEqual(404);
         }
