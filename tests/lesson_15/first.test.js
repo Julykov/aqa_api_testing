@@ -1,20 +1,9 @@
-const axios = require('axios');
+
+const { getPostWrongUrl } = require('../../src/apiService');
 
 
-describe('GET /posts', () => {
-    test('should return 404 code due to unexistent id', async () => {
-        const postId = 101
-        try {
-            const response = await axios.get(`https://jsonplaceholder.typicode.com/posts/${postId}`, {
-                headers: {
-                    'Content-Type': 'application/json',
-                }
-                }
-            )
-            console.log(response.data)
-        } catch(error) {
-            expect(error.response.status).toEqual(404);
-        }
-        
+describe('Check request ', () => {
+    test('should throw "Post not found" for non-existent id', async () => {
+        await expect(getPostWrongUrl(101)).rejects.toThrow('Not found');       
     });
 });

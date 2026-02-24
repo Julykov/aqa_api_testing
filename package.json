@@ -20,6 +20,10 @@
 	"main": "index.js",
 	"scripts": {
 		"test": "echo \"Error: no test specified\" && exit 1",
+		"test:hw_15_first": "npx jest tests/lesson_15/first.test.js",
+		"test:hw_15_second": "npx jest tests/lesson_15/second.test.js",
+		"test:hw_15_third": "npx jest tests/lesson_15/third.test.js",
+		"test:hw_15_all": "npx jest tests/lesson_15/ --verbose ",
 		"update:node": "npm i npm-check-updates && ncu --target minor -u && npm",
 		"lint": "npx eslint --fix .",
 		"prepare": "husky"
