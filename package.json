@@ -20,6 +20,10 @@
 	"main": "index.js",
 	"scripts": {
 		"test": "echo \"Error: no test specified\" && exit 1",
+		"test:hw_15_first": "npx jest tests/lesson_15/first.test.js",
+		"test:hw_15_second": "npx jest tests/lesson_15/second.test.js",
+		"test:hw_15_third": "npx jest tests/lesson_15/third.test.js",
+		"test:hw_15_all": "npx jest tests/lesson_15/ --verbose ",
 		"update:node": "npm i npm-check-updates && ncu --target minor -u && npm",
 		"lint": "npx eslint --fix .",
 		"prepare": "husky"
@@ -33,6 +37,8 @@
 		"@eslint/js": "^9.39.2",
 		"@eslint/json": "^0.14.0",
 		"@eslint/markdown": "^7.5.1",
+		"@faker-js/faker": "^7.6.0",
+		"axios-mock-adapter": "^2.1.0",
 		"eslint": "^9.39.2",
 		"globals": "^16.5.0",
 		"husky": "^9.1.7",
